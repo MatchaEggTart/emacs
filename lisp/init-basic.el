@@ -19,6 +19,7 @@
 (setq auto-save-default nil)
 
 ;; 将 custom 数据放在 custom.el 文件里
+;; (message user-emacs-directory)
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'no-error 'no-message)
 

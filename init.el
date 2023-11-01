@@ -14,8 +14,10 @@
 ;;  (add-to-list 'load-path folder))
 
 (require 'init-basic)
+(require 'init-elpa)
+(require 'init-search)
 (require 'init-temp)
-;; (require 'init-elpa)
+
 ;; (require 'init-system)
 ;; (require 'init-keybindings)
 ;; (require 'init-ui)
