@@ -11,21 +11,27 @@
 
 ;; update load-path to make customized lisp codes work
 ;; (dolist (folder (directory-files (concat user-emacs-directory "lisp") t directory-files-no-dot-files-regexp))
-;;  (add-to-list 'load-path folder))
+;;   (add-to-list 'load-path folder))
 
 (require 'init-basic)
+(require 'init-system)
 (require 'init-elpa)
+(require 'init-keybindings)
+(require 'init-ui)
 (require 'init-search)
-(require 'init-temp)
+(require 'init-edit)
+(require 'init-develop)
 
-;; (require 'init-system)
-;; (require 'init-keybindings)
-;; (require 'init-ui)
-;; (require 'init-edit)
-;; (require 'init-search)
+(require 'init-org)
+
+;; (require 'init-temp)
+
+
+
+
 ;; (require 'init-shell)
 ;; (require 'init-org)
-;; (require 'init-develop)
+
 ;; (require 'init-web)
 ;; (require 'init-javascript)
 ;; (require 'init-eglot)

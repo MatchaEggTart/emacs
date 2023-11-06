@@ -37,6 +37,9 @@
 ;; 默认使用 melpa-stable
 (setq use-package-always-pin "melpa-stable")
 
+;; 装完插件的重启工具
+(use-package restart-emacs)
+
 (provide 'init-elpa)
 
 ;;; init-elpa.el ends here
