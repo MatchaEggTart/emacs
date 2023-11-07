@@ -15,7 +15,7 @@
 	  ) . eglot-ensure)
   :bind ("C-c e f" . eglot-format)
   :config
-  (advice-add 'eglot-code-action-organize-imports :before #'eglot-format)
+  ;; (advice-add 'eglot-code-action-organize-imports :before #'eglot-format)
   ;; https://wiki.archlinux.org/title/Language_Server_Protocol
   ;; sudo pacman -S clang
   (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
