@@ -14,8 +14,17 @@
    company-idle-delay 0
    company-show-quick-access t)
   :bind (:map company-active-map
-	      ("C-n" . 'company-select-next)
+              ("C-n" . 'company-select-next)
 	      ("C-p" . 'company-select-previous)))
+
+(use-package format-all :ensure t
+  ;; enable format on save with format-all-mode
+  :hook ((prog-mode . format-all-mode)
+	 (format-all-mode . format-all-ensure-formatter))
+  ;; and bind a shortcut to manual format
+  ;; :bind ("C-c f" . #'format-all-region-or-buffer))
+  :bind ("C-c f" . #'format-all-buffer))
+
 
 (provide 'init-develop)
 
