@@ -65,7 +65,7 @@
   (global-set-key (kbd "C-c a") 'org-agenda)
   ;; touch ~/Workspace/gtd.org
   ;; 需要在 ~/Workspace/gtd.org 里面写计划
-  (setq org-agenda-files '("~/Workspace/gtd.org"))
+  (setq org-agenda-files '("~/Workspace/GTD/gtd.org"))
   ;; 在 agenda 按 w 变成一周 按 d 变成 day
   (setq org-agenda-span 'day)
   

@@ -21,7 +21,8 @@
 (require 'init-search)
 (require 'init-edit)
 (require 'init-develop)
-
+(require 'init-eglot)
+(require 'init-treesit)
 (require 'init-org)
 
 ;; (require 'init-temp)
