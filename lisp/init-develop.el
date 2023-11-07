@@ -17,6 +17,11 @@
               ("C-n" . 'company-select-next)
 	      ("C-p" . 'company-select-previous)))
 
+(use-package flymake
+  :config
+  ;; (require 'flymake-jslint)
+  ;; (add-hook 'js-mode-hook 'flymake-jslint-load)
+  )
 
 (provide 'init-develop)
 
