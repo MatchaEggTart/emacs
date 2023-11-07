@@ -21,7 +21,7 @@
   :config
   (setq treesit-auto-install 'prompt)
   (global-treesit-auto-mode)
-  (add-to-list 'treesit-extra-load-path "~/.emacs.d/tree-sitter/tree-sitter-module")
+  (add-to-list 'treesit-extra-load-path "~/.config/emacs/tree-sitter/tree-sitter-module")
   (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
   ;; 更多高亮
   (setq treesit-font-lock-level 4)
