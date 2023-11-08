@@ -49,7 +49,6 @@
 
 ;; 启动
 (use-package dashboard
-  ;; :ensure t
   :init
   (dashboard-setup-startup-hook)
   :config
@@ -65,7 +64,6 @@
 ;; 主题
 ;;; For packaged versions which must use `require'.
 (use-package modus-themes
-  :ensure t
   :init
   (require-theme 'modus-themes)
   :config
@@ -79,7 +77,7 @@
           modus-themes-preset-overrides-intense)
 
     ;; Load the theme of your choice.
-    (load-theme 'modus-operandi-tinted)
+    (load-theme 'modus-operandi-tinted :no-confim)
 
     ;; (define-key global-map (kbd "<f5>") #'modus-themes-toggle)
     )
@@ -126,10 +124,10 @@
   )
 
 ;; M-x all-the-icons-install-fonts
-(use-package all-the-icons
-  :if
-  (display-graphic-p)
-  )
+;; (use-package all-the-icons
+;;   :if
+;;   (display-graphic-p)
+;;   )
 
 ;; 这里的执行顺序非常重要，doom-modeline-mode 的激活时机一定要在设置global-mode-string 之后
 (use-package doom-modeline

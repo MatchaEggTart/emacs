@@ -26,14 +26,14 @@
   (interactive)
   (find-file (concat user-emacs-directory "init.el")))
 
-(global-set-key (kbd "<f5>") 'open-init-file)
+(global-set-key (kbd "<f6>") 'open-init-file)
 
 ;; 打开配置文件
 (defun open-config-folder()
   (interactive)
   (dired "~/.config/emacs/lisp/"))
 
-(global-set-key (kbd "<f6>") 'open-config-folder)
+(global-set-key (kbd "<f7>") 'open-config-folder)
 
 ;; 打开最近文件
 ;; 显示最近编辑过的文件
@@ -41,14 +41,14 @@
 (recentf-mode 1)
 (setq recentf-max-menu-item 10)
 
-(global-set-key (kbd "<f7>") 'recentf-open-files)
+(global-set-key (kbd "<f8>") 'recentf-open-files)
 
 ;; 打开 Worpspace
 (defun open-workspace()
   (interactive)
   (dired "~/Workspace/"))
 
-(global-set-key (kbd "<f8>") 'open-workspace)
+(global-set-key (kbd "<f9>") 'open-workspace)
 
 
 (provide 'init-keybindings)

@@ -17,11 +17,36 @@
               ("C-n" . 'company-select-next)
 	      ("C-p" . 'company-select-previous)))
 
+;; 自带的查错神器喔
 (use-package flymake
   :config
   ;; (require 'flymake-jslint)
   ;; (add-hook 'js-mode-hook 'flymake-jslint-load)
+  ;; :hook (prog-mode . flymake-mode)
+  :bind (("M-n" . #'flymake-goto-next-error)
+	 ("M-p" . #'flymake-goto-prev-error))
   )
+
+;; 快速运行代码
+(use-package quickrun
+  :commands (quickrun)
+  :init
+  (quickrun-add-command "c++/c1z"
+    '((:command . "g++")
+      (:exec . ("%c -std=c++1z %o -o %e %s"
+		"%e %a"))
+      (:remove . ("%e")))
+    :default "c++")
+  ;; You can override existing command
+  (quickrun-add-command "c/gcc"
+    '((:exec . ("%c -std=c++1z %o -o %e %s"
+		"%e %a")))
+    :override t)
+  :config
+  (global-set-key (kbd "<f5>") 'quickrun)
+  )
+
+
 
 (provide 'init-develop)
 

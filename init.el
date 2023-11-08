@@ -24,15 +24,13 @@
 (require 'init-org)
 (require 'init-eglot)
 (require 'init-treesit)
-
+(require 'init-shell)
 
 ;; (require 'init-temp)
 
 
 
 
-;; (require 'init-shell)
-;; (require 'init-org)
 
 ;; (require 'init-web)
 ;; (require 'init-javascript)

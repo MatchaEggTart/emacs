@@ -55,7 +55,6 @@
 ;; C-s C-r 搜索增强
 ;; sudo dnf install ripgrep || sudo pacman -S ripgrep
 (use-package consult
-  ;; :ensure t
   :bind
   ("C-s" . consult-line)
   ;; ("C-x b" . consult-buffer)
@@ -64,11 +63,10 @@
 
 ;; 在 函数 使用 embark-act (C-.) 可以看到函数的详细信息
 (use-package embark
-  :ensure t
   ;; :after (consult)
   :bind
   (("C-." . embark-act)         ;; pick some comfortable binding
-   ("C-;" . embark-dwim)        ;; good alternative: M-.
+   ;; ("C-;" . embark-dwim)        ;; good alternative: M-.
    ("C-h B" . embark-bindings)) ;; alternative for `describe-bindings'
 
   :init
@@ -102,7 +100,7 @@
 
 ;; Consult users will also want the embark-consult package.
 (use-package embark-consult
-  :ensure t ; only need to install it, embark loads it after consult if found
+  ;; only need to install it, embark loads it after consult if found
   :after (consult embark)
   :hook
   (embark-collect-mode . consult-preview-at-point-mode))

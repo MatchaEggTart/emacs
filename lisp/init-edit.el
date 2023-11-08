@@ -45,11 +45,29 @@
 (use-package move-dup
   :hook (after-init . global-move-dup-mode))
 
-
 ;; 快速切换窗格
 (use-package ace-window
   :bind (("M-o" . 'ace-window)))
 
+;; iedit - edit same text in one buffer or region
+;; (use-package iedit
+;;   :bind ("C-;" . iedit-mode)
+;; )
+
+;; 块选择器
+(use-package multiple-cursors
+  :bind
+  ("C-S-c C-S-c" . 'mc/edit-lines)
+  ("C->"         . 'mc/mark-next-like-this)
+  ("C-<"         . 'mc/mark-previous-like-this)
+  ("C-M->"       . 'mc/skip-to-next-like-this)
+  ("C-M-<"       . 'mc/skip-to-previous-like-this)
+  ("C-c C-<"     . 'mc/mark-all-like-this)
+  ("M-<mouse-1>" . 'mc/add-cursor-on-click)
+  ;; 要关闭 Fcitx5 的 C-; clipboard 快捷键
+  ("C-;"         . 'mc/mark-all-symbols-like-this)
+  ("C-:"         . 'mc/mark-all-symbols-like-this-in-defun)
+  )
 
 (provide 'init-edit)
 

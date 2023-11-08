@@ -55,7 +55,6 @@
 
 ;; 键盘提示
 (use-package keycast
-  :ensure t
   :hook
   (after-init . keycast-mode)
   )
@@ -69,7 +68,6 @@
 ;; 主题
 ;;; For packaged versions which must use `require'.
 (use-package modus-themes
-  :ensure t
   :init
   (require-theme 'modus-themes)
   :config
