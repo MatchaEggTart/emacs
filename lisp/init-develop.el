@@ -15,7 +15,32 @@
    company-show-quick-access t)
   :bind (:map company-active-map
               ("C-n" . 'company-select-next)
-	      ("C-p" . 'company-select-previous)))
+	      ("C-p" . 'company-select-previous))
+  )
+
+;; 输入补充
+(use-package yasnippet
+  :ensure t
+  :hook ((prog-mode . yas-minor-mode)
+	 (org-mode . yas-minor-mode))
+  :init
+  :config
+  (progn
+    (setq hippie-expand-try-functions-list
+	  '(yas/hippie-try-expand
+	    try-complete-file-name-partially
+	    try-expand-all-abbrevs
+	    try-expand-dabbrev
+	    try-expand-dabbrev-all-buffers
+	    try-expand-dabbrev-from-kill
+	    try-complete-lisp-symbol-partially
+	    try-complete-lisp-symbol)))
+  )
+
+(use-package yasnippet-snippets
+  :ensure t
+  :after yasnippet
+  )
 
 ;; 自带的查错神器喔
 (use-package flymake

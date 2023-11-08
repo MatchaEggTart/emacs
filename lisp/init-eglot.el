@@ -8,9 +8,12 @@
   ;; :hook (prog-mode . eglot-ensure)
   :hook ((
           elisp-mode
-          c-mode-hook
-          c++-mode-hook
+          c-mode
+	  c-ts-mode
+          c++-mode
+	  c++-ts-mode
           js-mode
+	  js-ts-mode
           typescript-ts-mode
           ) . eglot-ensure)
   :bind ("C-c e f" . eglot-format)

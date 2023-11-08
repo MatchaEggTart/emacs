@@ -56,9 +56,15 @@
 ;; sudo dnf install ripgrep || sudo pacman -S ripgrep
 (use-package consult
   :bind
-  ("C-s" . consult-line)
+  ("C-s"     . consult-line)
   ;; ("C-x b" . consult-buffer)
-  ("M-s r" . consult-ripgrep)
+  ("M-s r"   . consult-ripgrep)
+  ;; 在 Buffer 下跳转函数
+  ("M-g i"   . consult-imenu)
+  ("M-g I"   . consult-imenu-multi)
+  ;; 跳行
+  ("M-g g"   . consult-goto-line)             ;; orig. goto-line
+  ("M-g M-g" . consult-goto-line)           ;; orig. goto-line
   )
 
 ;; 在 函数 使用 embark-act (C-.) 可以看到函数的详细信息
