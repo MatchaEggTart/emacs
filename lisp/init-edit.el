@@ -13,6 +13,10 @@
 ;; 选中内容可以直接被输入内容取代
 (delete-selection-mode t)
 
+;; 折叠代码
+(add-hook 'prog-mode-hook 'hs-minor-mode)
+
+
 ;;让鼠标滚动更好用
 ;; (setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
 ;; (setq mouse-wheel-progressive-speed nil)
