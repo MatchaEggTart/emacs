@@ -20,7 +20,7 @@
 
 ;; 输入补充
 (use-package yasnippet
-  :ensure t
+  :defer t
   :hook ((prog-mode . yas-minor-mode)
 	 (org-mode . yas-minor-mode))
   :init
@@ -38,7 +38,6 @@
   )
 
 (use-package yasnippet-snippets
-  :ensure t
   :after yasnippet
   )
 

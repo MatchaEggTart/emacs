@@ -16,11 +16,16 @@
 
 (use-package vterm
   :pin melpa
+  :defer t
   ;; 教程 https://www.5axxw.com/wiki/content/aqagqc
   :bind
   ("C-c t" . vterm)
   ;; vterm-copy-mode，默认使用 C-c C-t
+  :config
+
   )
+
+
 ;; :confit (display-line-numbers-mode nil))
 ;;  )
 
