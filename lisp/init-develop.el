@@ -5,17 +5,36 @@
 ;; -*- lexical-binding: t -*-
 
 ;; 自动补全(新)
-(use-package company
-  :hook (after-init . global-company-mode)
+;; (use-package company
+;;   :hook (after-init . global-company-mode)
+;;   :config
+;;   (setq
+;;    company-minimum-prefix-length 1
+;;    ;; 补全时间等待
+;;    company-idle-delay 0
+;;    company-show-quick-access t)
+;;   :bind (:map company-active-map
+;;               ("C-n" . 'company-select-next)
+;; 	      ("C-p" . 'company-select-previous))
+;;   )
+
+;; 新的补全
+(use-package corfu
+  :hook (after-init . global-corfu-mode)
+  ;; :init
   :config
-  (setq
-   company-minimum-prefix-length 1
-   ;; 补全时间等待
-   company-idle-delay 0
-   company-show-quick-access t)
-  :bind (:map company-active-map
-              ("C-n" . 'company-select-next)
-	      ("C-p" . 'company-select-previous))
+  (progn
+    (setq corfu-auto t)
+    (setq corfu-cycle t)
+    (setq corfu-quit-at-boundary t)
+    (setq corfu-quit-no-match t)
+    (setq corfu-preview-current nil)
+    ;; (setq corfu-min-width 80)
+    ;; (setq corfu-max-width 100)
+    (setq corfu-auto-delay 0.2)
+    (setq corfu-auto-prefix 2)
+    (setq corfu-on-exact-match nil)
+    )
   )
 
 ;; 输入补充
