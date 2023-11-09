@@ -1,10 +1,13 @@
-;; Org Mode
+;;; init-org.el --- the configurations for org
+;;; Commentary:
+;;; Code:
 
-;; 非官方工具，引入 checklist
-(use-package org-contrib
-  :pin nongnu
+;; -*- lexical-binding: t -*-
+
+(with-eval-after-load 'org
   )
 
+;; Org Mode
 (use-package org
   :init
   (add-hook 'org-mode-hook
@@ -17,16 +20,17 @@
 	    )
 
   ;; 这特么要自己建个 org-bars.el 然后把代码复制上去才有效果
-  (require 'org-bars)
-  ;; (add-hook 'org-mode-hook #'org-bars-mode)
   
-
+  
+  ;; (add-hook 'org-mode-hook #'org-bars-mode)
   :hook (org-mode . org-bars-mode)
 
   :config
+  (require 'org-bars)
+  
   ;; 快捷键 <s TAB 创建代码块
   (require 'org-tempo) ; 开启 easy template
-  
+
   (setq org-hide-leading-stars t
   	org-hide-emphasis-markers t
 	;; 隐藏标题栏里的一堆星号
@@ -73,11 +77,19 @@
   ;; (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
   ;; (setq org-bullets-bullet-list '(" " " " " " " ")) ;;将 Headlines 的符号变成其它符号
   ;; (setq org-hide-emphasis-markers t) ;;直接显示语法样式
+  
+  
   )
+
+;; 非官方工具，引入 checklist
+(use-package org-contrib
+  :pin nongnu
+  :after org
+  )
+
 
 ;; 截图神器
 (use-package org-download
-  :demand t
   :after org
   :bind
   ("C-S-y" . org-download-screenshot)
@@ -132,3 +144,4 @@
 
 
 (provide 'init-org)
+;;; init-org.el ends here

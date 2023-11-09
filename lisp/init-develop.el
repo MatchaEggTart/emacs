@@ -39,7 +39,6 @@
 
 ;; 输入补充
 (use-package yasnippet
-  :defer t
   :hook ((prog-mode . yas-minor-mode)
 	 (org-mode . yas-minor-mode))
   :init
@@ -88,8 +87,6 @@
   :config
   (global-set-key (kbd "<f5>") 'quickrun)
   )
-
-
 
 (provide 'init-develop)
 
