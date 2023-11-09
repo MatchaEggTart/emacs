@@ -15,11 +15,11 @@
     (toggle-frame-maximized)
     
     ;; 菜单栏关闭
-    (menu-bar-mode 0)
+    ;; (menu-bar-mode 0)
     ;; 工具栏关闭
-    (tool-bar-mode 0)
+    ;; (tool-bar-mode 0)
     ;; 滚动条关闭
-    (scroll-bar-mode 0)
+    ;; (scroll-bar-mode 0)
     
     ;; 显示行号
     (add-hook 'prog-mode-hook #'display-line-numbers-mode t)
