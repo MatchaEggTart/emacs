@@ -31,10 +31,15 @@
 	  (json       . ("https://gh-proxy.com/https://github.com/tree-sitter/tree-sitter-json"))
 	  (org        . ("https://gh-proxy.com/https://github.com/milisims/tree-sitter-org"))
 	  (yaml       . ("https://gh-proxy.com/https://github.com/ikatyang/tree-sitter-yaml"))
-
 	  ))
   :mode
-  ("\\.ts\\'" . typescript-ts-mode)
+  (
+   ("\\.go\\'" . go-ts-mode)
+   ("/go\\.mod\\'" . go-mod-ts-mode)
+   ("\\.rs\\'" . rust-ts-mode)
+   ("\\.ts\\'" . typescript-ts-mode)
+   ("\\.y[a]?ml\\'" . yaml-ts-mode)
+   )
   :config
   (setq treesit-auto-install 'prompt)
   (global-treesit-auto-mode)

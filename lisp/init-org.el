@@ -75,7 +75,35 @@
   ;; (setq org-hide-emphasis-markers t) ;;直接显示语法样式
   )
 
+;; 截图神器
+(use-package org-download
+  :demand t
+  :after org
+  :bind
+  ("C-S-y" . org-download-screenshot)
+  :config
+  (add-hook 'dired-mode-hook 'org-download-enable)
+  
+  ;; windows 专用
+  ;; (setq org-download-screenshot-method "powershell -c Add-Type -AssemblyName System.Windows.Forms;$image = [Windows.Forms.Clipboard]::GetImage();$image.Save('%s', [System.Drawing.Imaging.ImageFormat]::Png)")
+  
+  ;; archlinux kde use wl-clipboard
+  ;; install command: sudo pacman -S wl-clipboard
+  (setq org-download-screenshot-method "wl-paste -t image/png > '%s'")
+  ;; 关闭默认图片尺寸
+  (setq org-image-actual-width nil)
+  
+  (defun org-download-annotate-default (link)
+    "Annotate LINK with the time of download."
+    (make-string 0 ?\s))
 
+  (setq-default
+   org-download-heading-lvl nil
+   org-download-image-dir "./img"
+   ;; org-download-screenshot-method "screencapture -i %s"
+   org-download-screenshot-file (expand-file-name "screenshot.jpg" temporary-file-directory)
+   )
+  )
 
 
 

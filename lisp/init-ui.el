@@ -23,7 +23,7 @@
     
     ;; 显示行号
     (add-hook 'prog-mode-hook #'display-line-numbers-mode t)
-    (add-hook 'text-mode-hook #'display-line-numbers-mode t)
+    ;; (add-hook 'text-mode-hook #'display-line-numbers-mode t)
     ;; 设置默认行号的长度
     ;; (setq-default display-line-numbers-width-start 4)
     (setq-default display-line-numbers-width 4)

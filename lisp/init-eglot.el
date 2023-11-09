@@ -27,7 +27,6 @@
   ;; sudo npm install -g typescrip typescript-language-server
   (add-to-list 'eglot-server-programs '(js-mode "typescript-language-server" "--stdio"))
   (add-to-list 'eglot-server-programs '(typescript-ts-mode "typescript-language-server" "--stdio"))
-
   
   )
 
