@@ -28,15 +28,4 @@
 
 ;; (require 'init-temp)
 
-
-
-
-
-;; (require 'init-web)
-;; (require 'init-javascript)
-;; (require 'init-eglot)
-
-;; (require 'init-awesome-tab)
-
-
 ;;; init.el ends here
