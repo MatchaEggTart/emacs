@@ -1,3 +1,3 @@
 sudo pacman -S clang
-sudo npm install -g typescrip typescript-language-server
+sudo npm install -g typescript typescript-language-server
 # sudo pacman -S tree-sitter
