@@ -37,6 +37,7 @@
    ("\\.go\\'" . go-ts-mode)
    ("/go\\.mod\\'" . go-mod-ts-mode)
    ("\\.rs\\'" . rust-ts-mode)
+      ("\\.js\\'" . js-ts-mode)
    ("\\.ts\\'" . typescript-ts-mode)
    ("\\.y[a]?ml\\'" . yaml-ts-mode)
    )
