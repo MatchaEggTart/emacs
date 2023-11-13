@@ -40,14 +40,20 @@
       ("\\.js\\'" . js-ts-mode)
    ("\\.ts\\'" . typescript-ts-mode)
    ("\\.y[a]?ml\\'" . yaml-ts-mode)
+   ("\\.sh\\'" . bash-ts-mode)
    )
   :config
   (setq treesit-auto-install 'prompt)
   (global-treesit-auto-mode)
   (add-to-list 'treesit-extra-load-path "~/.config/emacs/tree-sitter/tree-sitter-module")
+  
   ;; (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
   ;; 更多高亮
   (setq treesit-font-lock-level 4)
+
+  ;; 缩进
+  (setq c-ts-mode-indent-offset 4)
+  (setq typescript-ts-mode-indent-offset 2)
   )
 
 
