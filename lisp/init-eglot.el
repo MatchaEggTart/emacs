@@ -12,7 +12,7 @@
 	  c-ts-mode
           c++-mode
 	  c++-ts-mode
-	  bash-ts-mode
+	  ;; bash-ts-mode
           js-mode
 	  js-ts-mode
           typescript-ts-mode
