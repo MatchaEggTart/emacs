@@ -35,7 +35,7 @@
 
     ;; Bash
     ;; sudo npm i -g bash-language-server
-    (add-to-list 'eglot-server-programs '(bash-ts-mode "bash-language-server" "start"))
+    ;; (add-to-list 'eglot-server-programs '(bash-ts-mode "bash-language-server" "start"))
 
     
     )
