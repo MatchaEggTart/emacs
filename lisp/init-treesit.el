@@ -21,7 +21,7 @@
 	'(
 	  (c          . ("https://gh-proxy.com/https://github.com/tree-sitter/tree-sitter-c"))
 	  (cpp        . ("https://gh-proxy.com/https://github.com/tree-sitter/tree-sitter-cpp"))
-	  ;; (bash       . ("https://gh-proxy.com/https://github.com/tree-sitter/tree-sitter-bash"))
+	  (bash       . ("https://gh-proxy.com/https://github.com/tree-sitter/tree-sitter-bash"))
 	  (elisp      . ("https://gh-proxy.com/https://github.com/Wilfred/tree-sitter-elisp"))
 	  (html       . ("https://gh-proxy.com/https://github.com/tree-sitter/tree-sitter-html"))
 	  (css        . ("https://gh-proxy.com/https://github.com/tree-sitter/tree-sitter-css"))
