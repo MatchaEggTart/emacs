@@ -14,6 +14,7 @@
 ;;  
 ;; (use-package tree-sitter-langs
 ;;   )
+
 (use-package treesit-auto
   :demand t
   :init
@@ -37,7 +38,7 @@
    ("\\.go\\'" . go-ts-mode)
    ("/go\\.mod\\'" . go-mod-ts-mode)
    ("\\.rs\\'" . rust-ts-mode)
-   ("\\.js\\'" . js-ts-mode)
+   ("\\.js\\'" . typescript-ts-mode)
    ("\\.ts\\'" . typescript-ts-mode)
    ("\\.y[a]?ml\\'" . yaml-ts-mode)
    ;; ("\\.sh\\'" . bash-ts-mode)
@@ -60,3 +61,4 @@
 (provide 'init-treesit)
 
 ;;; init-treesit.el ends here
+

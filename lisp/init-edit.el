@@ -47,7 +47,11 @@
 
 ;; 快速切换窗格
 (use-package ace-window
-  :bind (("M-o" . 'ace-window)))
+  :bind (("M-o" . 'ace-window))
+  ;; :config
+  ;; 左侧显示窗口编号
+  ;; (setq ace-window-display-mode t)
+  )
 
 ;; iedit - edit same text in one buffer or region
 ;; (use-package iedit
