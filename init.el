@@ -26,6 +26,9 @@
 (require 'init-treesit)
 (require 'init-shell)
 
+(require 'init-web)
+
 ;; (require 'init-temp)
 
 ;;; init.el ends here
+(put 'dired-find-alternate-file 'disabled nil)

@@ -45,4 +45,4 @@
   )
 
 (provide 'init-eglot)
-  ;;; init-eglot.el ends here
+;;; init-eglot.el ends here
