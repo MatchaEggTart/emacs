@@ -60,14 +60,22 @@
   )
 
 ;; 自带的查错神器喔
+;; flymake
 (use-package flymake
   :config
   ;; (require 'flymake-jslint)
   ;; (add-hook 'js-mode-hook 'flymake-jslint-load)
   ;; :hook (prog-mode . flymake-mode)
   :bind (("M-n" . #'flymake-goto-next-error)
-	 ("M-p" . #'flymake-goto-prev-error))
+ 	 ("M-p" . #'flymake-goto-prev-error))
   )
+
+;; flycheck
+;; (use-package flycheck
+;;   :ensure t
+;;   :init (setq flymake-mode nil);
+;;   :hook (prog-mode . flycheck-mode)
+;;   )
 
 ;; 快速运行代码
 (use-package quickrun

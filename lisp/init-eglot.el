@@ -39,7 +39,8 @@
     ;; sudo npm i -g bash-language-server
     ;; (add-to-list 'eglot-server-programs '(bash-ts-mode "bash-language-server" "start"))
 
-    
+    ;; 关闭 flymake
+    ;; (setq eglot-stay-out-of '(flymake))
     )
   )
 
