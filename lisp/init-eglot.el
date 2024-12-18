@@ -15,7 +15,7 @@
 	  c++-ts-mode
 	  ;; bash-ts-mode
           ;; js-mode
-	  ;; js-ts-mode
+	  js-ts-mode
           typescript-ts-mode
 	  yaml-ts-mode
           ) . eglot-ensure)

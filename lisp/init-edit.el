@@ -47,15 +47,14 @@
 
 ;; 快速切换窗格
 (use-package ace-window
-  :config
+  ;; :config
+  ;; (keymap-global-unset (kbd "M-o M-o"))
   ;; 取消这个按键，避免冲突
   ;; (global-set-key (kbd "M-o M-o") nil)
   ;; 左侧显示窗口编号
   ;; (setq ace-window-display-mode t)
   :bind
-  (
-   ("M-o" . 'ace-window)
-   ;; ("C-x M-o" . 'font-lock-fontify-block)
+  (("M-o" . 'ace-window)
    )
   )
 

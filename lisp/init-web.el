@@ -6,8 +6,13 @@
 
 ;; emmet
 (use-package emmet-mode
-  :hook ((sgml-mode-hook html-mode-hook web-mode-hook css-mode-hook) . emmet-mode)
-  :bind (("C-x j" . emmet-expand-line))
+  :hook ((
+	  ;;sgml-mode-hook
+	  html-mode-hook
+	  ;; web-mode-hook
+	  css-mode-hook
+	  tsx-ts-mode-hook) . emmet-mode)
+  :bind (("C-j" . emmet-expand-line))
   )
 
 ;; JSONRPC
