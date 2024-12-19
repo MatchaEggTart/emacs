@@ -17,9 +17,16 @@
 ;; 查找按键
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
 
-
 ;; 查找项目文件快捷键
 (global-set-key (kbd "C-x p f") 'project-find-file)
+
+;; 调整窗口
+;; = C-x ^
+(global-set-key (kbd "C-c C-<up>") 'enlarge-window)
+;; = C-x {
+(global-set-key (kbd "C-c C-<left>") 'shrink-window-horizontally)
+;; = C-x }
+(global-set-key (kbd "C-c C-<right>") 'enlarge-window-horizontally)
 
 ;; 打开 init.el 文件
 (defun open-init-file()
