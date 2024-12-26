@@ -19,5 +19,23 @@
 ;; (use-package jsonrpc
 ;;   :ensure t)
 
+(use-package web-mode
+  :ensure t
+  :mode
+  (
+   ;; ("\\.phtml\\'" . web-mode)
+   ;; ("\\.php\\'" . web-mode)
+   ;; ("\\.tpl\\'" . web-mode)
+   ;; ("\\.[agj]sp\\'" . web-mode)
+   ;; ("\\.as[cp]x\\'" . web-mode)
+   ;; ("\\.erb\\'" . web-mode)
+   ;; ("\\.mustache\\'" . web-mode)
+   ;; ("\\.djhtml\\'" . web-mode)
+   ("\\.html\\'" . web-mode)
+   )
+  :config
+  (setq web-mode-markup-indent-offset 2)
+  )
+
 (provide 'init-web)
 ;;; init-web.el ends here

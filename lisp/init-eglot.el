@@ -18,6 +18,7 @@
 	  js-ts-mode
           typescript-ts-mode
 	  yaml-ts-mode
+	  web-mode
           ) . eglot-ensure)
   :bind ("C-c e f" . eglot-format)
   :config
@@ -35,6 +36,9 @@
     ;; sudo npm install -D -g typescript typescript-language-server@4.0.0
     (add-to-list 'eglot-server-programs '(js-mode js-ts-mode typescript-ts-mode "typescript-language-server" "--stdio"))
 
+    ;; HTML
+    ;; npm i -g vscode-langservers-extracted
+    (add-to-list 'eglot-server-programs '((html-mode web-mode) "vscode-html-language-server" "--stdio"))
     ;; Bash
     ;; sudo npm i -g bash-language-server
     ;; (add-to-list 'eglot-server-programs '(bash-ts-mode "bash-language-server" "start"))

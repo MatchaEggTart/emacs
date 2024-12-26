@@ -28,6 +28,14 @@
 ;; = C-x }
 (global-set-key (kbd "C-c C-<right>") 'enlarge-window-horizontally)
 
+;; facemenu-keymap M-o
+
+;; (define-key map )
+;; (setq facemenu-keymap nil)
+;; (defvar facemenu-keymap nil)
+;; (define-key [C-c o] 'facemenu-keymap)
+;; (global-set-key (kbd "C-c o") 'facemenu-keymap)
+
 ;; 打开 init.el 文件
 (defun open-init-file()
   (interactive)

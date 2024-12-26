@@ -54,8 +54,7 @@
   ;; 左侧显示窗口编号
   ;; (setq ace-window-display-mode t)
   :bind
-  (("M-o" . 'ace-window)
-   )
+  ("M-o" . 'ace-window)
   )
 
 ;; iedit - edit same text in one buffer or region
