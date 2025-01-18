@@ -34,13 +34,15 @@
     
     ;; 光标线状还是块状
     (setq-default cursor-type 'bar)
+
+    ;; 字体
+    ;; Setting English Font
+    (set-face-attribute 'default nil :font (font-spec :family "JetBrainsMonoNerdFont" :size 16))
+    ;; Setting Chinese Font
+    (set-fontset-font t 'han (font-spec :family "霞鹜文楷" :weight 'bold))
     )
   )
 
-;; Setting English Font
-(set-face-attribute 'default nil :font (font-spec :family "JetBrainsMonoNerdFont" :size 14))
-;; Setting Chinese Font
-(set-fontset-font t 'han (font-spec :family "霞鹜文楷" :weight 'bold))
 
 (use-package projectile
   :config
