@@ -31,6 +31,7 @@
     ;; 高亮当前行
     (add-hook 'prog-mode-hook #'hl-line-mode t)
     (add-hook 'text-mode-hook #'hl-line-mode t)
+    ;; (global-hl-line-mode t)
     
     ;; 光标线状还是块状
     (setq-default cursor-type 'bar)

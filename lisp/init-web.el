@@ -37,5 +37,30 @@
   (setq web-mode-markup-indent-offset 2)
   )
 
+;; JSON
+(use-package json-mode
+  :ensure t
+  :mode
+  (
+   ("\\.json\\'" . json-mode)
+   ("\\.jsonc\\'" . json-mode)
+   )
+  :config
+  (setq js-indent-level 2)
+  )
+
+;; CONF-MODE
+(use-package nginx-mode
+  :ensure t
+  :mode
+  (
+   ("\config\\'" . nginx-mode)
+   ("\\.conf\\'" . nginx-mode)
+   )
+  :config
+  (setq nginx-indent-level 2)
+  )
+
 (provide 'init-web)
 ;;; init-web.el ends here
+
