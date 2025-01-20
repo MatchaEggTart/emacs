@@ -96,6 +96,19 @@
   (global-set-key (kbd "<f5>") 'quickrun)
   )
 
+;; format-all-the-code
+(use-package format-all
+  :commands format-all-mode
+  :hook (prog-mode . format-all-mode)
+  :config
+  (setq-default format-all-formatters
+                '(
+		  ("C"     (astyle "--mode=c"))
+                  ("Shell" (shfmt "-i" "4" "-ci"))
+		  )
+		)
+  )
+
 (provide 'init-develop)
 
 ;;; init-develop.el ends here

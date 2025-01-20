@@ -43,6 +43,17 @@
     ;; sudo npm i -g bash-language-server
     ;; (add-to-list 'eglot-server-programs '(bash-ts-mode "bash-language-server" "start"))
 
+    ;; YAML
+    (add-to-list 'eglot-server-programs '((yaml-mode yaml-ts-mode) "yaml-language-server" "--stdio"))
+
+    ;; json
+    (add-to-list 'eglot-server-programs '((json-mode jsonc-mode) "vscode-json-language-server" "--stdio"))
+
+    ;; html
+    (add-to-list 'eglot-server-programs '((html-mode web-mode) "vscode-html-language-server" "--stdio"))
+
+    ;; css
+    (add-to-list 'eglot-server-programs '((css-mode) "vscode-css-language-server" "--stdio"))
     ;; 关闭 flymake
     ;; (setq eglot-stay-out-of '(flymake))
     )

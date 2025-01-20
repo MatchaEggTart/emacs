@@ -61,6 +61,24 @@
   (setq nginx-indent-level 2)
   )
 
+;; Major mode for editing YAML files
+(use-package yaml-mode
+  :ensure t
+  ;; :straight t
+  :mode (("\\.\\(yml\\|yaml\\)\\'" . yaml-mode)
+         ("Procfile\\'" . yaml-mode))
+  )
+
+
+;; Parser-aided YAML editing features
+(use-package yaml-pro
+  :ensure t
+  ;; :straight t
+  ;; :when (+emacs-options-p 'tree-sitter)
+  :hook (yaml-mode . yaml-pro-mode)
+  :hook (yaml-ts-mode . yaml-pro-ts-mode)
+  )
+
 (provide 'init-web)
 ;;; init-web.el ends here
 

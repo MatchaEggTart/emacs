@@ -41,6 +41,10 @@
     (set-face-attribute 'default nil :font (font-spec :family "JetBrainsMonoNerdFont" :size 16))
     ;; Setting Chinese Font
     (set-fontset-font t 'han (font-spec :family "霞鹜文楷" :weight 'bold))
+
+    ;; 透明度
+    ;; (set-frame-parameter nil 'alpha-background 90)
+    ;; (add-to-list 'default-frame-alist '(alpha-background . 90))
     )
   )
 
